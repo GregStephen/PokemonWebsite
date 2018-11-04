@@ -11,9 +11,9 @@
 	<div class = "wrap">
 		<h1>HEY LET'S CHECK OUT SOME POKEMON</h1>
 		<section class = formBox>
-			<form>
+			<form id = "pokemonSearchForm">
 				<label for = "search">Search by name or number:</label>
-				<input type = "text" name = "search">
+				<input type = "text" id = "searchBar" name = "search">
 				<label for="type-select">Choose a type:</label>
 				<select id="type-select">
 					<option value="">--Please choose an option--</option>
@@ -36,10 +36,16 @@
 					<option value="steel">Steel</option>
 					<option value="dark">Dark</option>
 				</select>
+				<button id = "searchBtn">Search!</button>
 			</form>
 		</section>
 	</div>
 
+<div class="container" id="favorite-container">
+    <div id="output-places" class="row">
+       
+    </div>
+    </div>
 
 
 
