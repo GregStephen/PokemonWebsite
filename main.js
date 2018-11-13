@@ -244,12 +244,23 @@ function showPokemon(pokemonArray) {
 		console.log(i.type);
 		console.log(searchVal);
 		console.log(typeSelected);
-
-		if (i.type.includes(typeSelected)){
+		//IF NO TYPE IS SELECTED THEN IT SELECTS ALL
+		if (typeSelected === ""){
+			//IT THEN GOES TO THE SEARCH BAR TO NARROW DOWN THE FIELD
 			if (i.name.toLowerCase().includes(searchVal)) {
-				divOutput.append(`<li class = "pokemonSheet col-4 ${i.type}"><figure><a href="#"><img src="${i.image}"></a></figure>
-					<div class = "pokemonInfo><p class="id"><span class = "number">#</span>${i.number}</p>
-					<p class = "type">${i.type}</p><h5>${i.name}</h5>`).children(':last').hide().fadeIn(1500);
+				divOutput.append(`<li class = "pokemonSheet col-4 ${i.type[0]} ${i.type[1]}}"><figure><a href="#"><img src="${i.image}"></a></figure>
+					<div class = "pokemonInfo">
+					<p class = "type">${i.type}</p> 
+					<span class = "id"><h5 class="nameOfPoke">${i.name}</h5><p class= "number"># ${i.number}</p></span></div>`).children(':last').hide().fadeIn(1500);
+			}
+			//THIS IS IF THEY SELECT A TYPE 
+		} else if(i.type.includes(typeSelected)){
+			//AFTER IT SPECIFIES THE TYPE IT THEN NARROWS IT DOWN USING THE SEARCH BAR
+			if (i.name.toLowerCase().includes(searchVal)) {
+				divOutput.append(`<li class = "pokemonSheet col-4 ${i.type[0]} ${i.type[1]}}"><figure><a href="#"><img src="${i.image}"></a></figure>
+					<div class = "pokemonInfo">
+					<p class = "type">${i.type}</p> 
+					<span class = "id"><h5 class="nameOfPoke">${i.name}</h5><p class= "number"># ${i.number}</p></span></div>`).children(':last').hide().fadeIn(1500);
 			// (`<div class="card bg-dark text-white col" 
 			// 	style="width:18rem;"><h5 class="card-header">${i.name} #${i.number}</h5>
 			// 	<img class="card-img-top location-image" src="${i.image}"alt="${i.name}">

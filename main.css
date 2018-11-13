@@ -1,12 +1,23 @@
-.formBox{
-	text-align: center;
+body {
+	background: #C6FFDD;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-ul{
+ul {
 	list-style-type: none;
 }
 
-.pokemonSheet{
+img {
+	max-width: 100%;
+}
+
+.formBox {
+	text-align: center;
+}
+
+.pokemonSheet {
 	background-image: url("http://bbeu.tntsj.com/images/6614-1.jpg");
 	margin: 1em;
 	max-width: 15em;
@@ -17,12 +28,38 @@ ul{
 	border-radius: 5%;
 }
 
-img{
-	max-width: 100%;
+
+.type {
+ 	font-size: .5em;
+ 	border: 1.5px solid black;
+ 	padding: .5em;
+ 	margin-bottom: .5em;
+ 	margin-top:-1.5em;
+ 	
 }
 
-.pokemonInfo{
-	border: 2px solid black;
-    background-color: lightblue;
+.fire {
+	border: 2px solid red;
 }
 
+.water{
+	background-image: url("https://i.pinimg.com/originals/b4/76/ee/b476eec8f8e2bdfa3900964bc07f2e6c.png");
+	background-position: center;
+	background-size: cover;
+	color: white;
+}
+.water .type{
+	border: 1.5px solid white;
+}
+
+.id{
+	margin-bottom: -1em;
+	display: inline;
+}
+
+.number{
+	float: right;
+}
+.nameOfPoke{
+	float: left;
+}
